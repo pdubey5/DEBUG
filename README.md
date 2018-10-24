@@ -1,3 +1,4 @@
+```
 # StreamsDebug
 
 # MapR Streams Debug jar
@@ -40,4 +41,4 @@ java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr class
 
 Assign the consumer to a specific partitions and then poll on that partition and check messages 
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s /strDbg:topic1 -m  consumer -g grp  -f assignOne -p 0
-
+```
