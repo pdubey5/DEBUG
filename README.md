@@ -30,15 +30,17 @@ Sample Run Commands:
 Produce Messages to the Stream
 java -cp .:target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s /testSpring:topic1 -m producer -n 1
 
-Simply Consumer with default options for consumer:
+Simply Run a Consumer with default options for consumer:
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s testSpring:topic1 -m  consumer
 
-Specify the Consumer Group and Consumer
+Specify the Consumer Group and then run a Consumer
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s testSpring:topic1 -m  consumer -g temp1
 
 Assign the consumer to each partitions and then poll on that partitions and check messages in each partitions
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s /strDbg:topic1 -m  consumer -g temp1 -f assignPoll
 
-Assign the consumer to a specific partitions and then poll on that partition and check messages 
+Assign the consumer to a specific one partitions and then poll on that partition and check messages 
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s /strDbg:topic1 -m  consumer -g grp  -f assignOne -p 0
+
+
 ```
