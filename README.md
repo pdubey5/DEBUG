@@ -18,8 +18,11 @@ mapr-librdkafka-0.11.3.201803231414-1.noarch
 # MapR Streams Debug jar
 
 # usage:
- -s,--stream <arg>    Stream & TopicName : /<StreamPath>:<TopicName>.
+Mandatory Parameters:
+ -s,--stream <arg>    Stream & TopicName : /<StreamPath>:<TopicName>. 
  -m,--module <arg>    Module Name (consumer/producer).
+ 
+ Optional Parameters
  -n,--num <arg>       Number of Messages to produce (<number>) Default 100.
  -f,--func <arg>      Consumer Function 
                       (poll/assignPoll/assignOne/gettimeout/assignOneSeek)
