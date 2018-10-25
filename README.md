@@ -1,5 +1,19 @@
 ```
 # StreamsDebug
+This program can be used to run and check messages and offsets in a stream and also do operations only on particular topic partition in respect to consumer.
+
+You can do these tasks with this:
+1. Produce Messages to the Stream.
+2. Run a Consumer and consume and print offset or/and messages.
+3. Count Number of Messages within a stream.
+4. Specify the Consumer Group and then run a Consumer
+5. Assign the consumer to each partitions and then poll on that partitions and check messages in each partitions
+6. Assign the consumer to a specific one partitions and then poll on that partition and check messages 
+
+You need to have these packages installed on the client:
+For 6.0.1
+mapr-kafka-1.1.1.201806260740-1.noarch
+mapr-librdkafka-0.11.3.201803231414-1.noarch
 
 # MapR Streams Debug jar
 
@@ -32,6 +46,9 @@ java -cp .:target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpa
 
 Simply Run a Consumer with default options for consumer:
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s testSpring:topic1 -m  consumer
+
+Count Number of Messages within a stream:
+java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s /strDbg:topic1 -m  consumer -g gcount -f poll
 
 Specify the Consumer Group and then run a Consumer
 java -cp .:./target/mapr-streams-debug-1.0-jar-with-dependencies.jar:`mapr classpath` Main  -s testSpring:topic1 -m  consumer -g temp1
